@@ -33,4 +33,5 @@ def get_data():
     return jsonify({"data": values})
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Lấy PORT từ biến môi trường
+    app.run(host="0.0.0.0", port=port)  # Chạy đúng cổng Render yêu cầu
